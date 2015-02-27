@@ -1,0 +1,16 @@
+{
+  "name": "charlotte",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Linda Nichols",
+  "license": "MIT",
+  "dependencies": {
+    "rolling-spider": "git://github.com/voodootikigod/node-rolling-spider.git",
+    "temporal": "^0.4.0"
+  }
+}
