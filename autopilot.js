@@ -8,7 +8,6 @@ var charlotte = new RollingSpider();
 charlotte.connect(function() {
   charlotte.setup(function() {
 
-
     temporal.queue([
       {
         delay: 0,
