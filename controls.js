@@ -7,11 +7,11 @@ var RollingSpider = require('rolling-spider');
 keypress(process.stdin);
 
 process.stdin.setRawMode(true);
-//process.stdin.setEncoding('utf8');
+process.stdin.setEncoding('utf8');
 process.stdin.resume();
 
 var charlotte = new RollingSpider(process.env.UUID);
-
+console.log('t');
 charlotte.connect(function () {
   console.log('connecting to Charlotte');
   charlotte.setup(function () {
