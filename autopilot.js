@@ -14,18 +14,23 @@ charlotte.connect(function() {
         task: function () {
           charlotte.flatTrim();
           charlotte.startPing();
+          charlotte.flatTrim();
+          console.log('Taking off!');
           charlotte.takeOff();
+          charlotte.flatTrim();
         }
       },
       {
         delay: 3000,
         task: function () {
+          console.log('Going forward');
           charlotte.forward();
         }
       },
       {
         delay: 500,
         task: function () {
+          console.log('Landing!');
           charlotte.land();
         }
       }]);
