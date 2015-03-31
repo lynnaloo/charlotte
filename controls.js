@@ -26,28 +26,27 @@ charlotte.connect(function () {
     console.log('Listening for key controls ...');
 
     process.stdin.on('keypress', function (ch, key) {
-      if ( !key ) {
+      if (!key) {
         console.log('invalid input');
         return;
       }
 
-      if (key.name === 'q') {
-        console.log('Landing now...');
-        charlotte.land();
-        setTimeout(function () {
-          process.exit();
-        }, 3000);
-      }
-
       if (key) {
+        if (key.name === 'q') {
+          console.log('Landing now...');
+          charlotte.land();
+          setTimeout(function () {
+            process.exit();
+          }, 3000);
+        }
 
         if (key.name === 'w') {
           console.log('Going forward');
-          charlotte.forward({steps: 100});
+          charlotte.forward({steps: 50});
 
         } else if (key.name === 's') {
           console.log('Going backward');
-          charlotte.backward({steps: 100});
+          charlotte.backward({steps: 50});
 
         } else if (key.name === 'a') {
           console.log('Turning Left');
