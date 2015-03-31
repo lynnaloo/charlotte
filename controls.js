@@ -16,11 +16,14 @@ charlotte.connect(function () {
   console.log('connecting to Charlotte');
   charlotte.setup(function () {
     // start on flat surface
-    charlotte.flatTrim();
+    d.flatTrim();
+    // find quadcopter
     console.log('Charlotte, are you there?');
-    charlotte.startPing();
-    console.log('Take off!!');
-    charlotte.takeOff();
+    d.startPing();
+    d.flatTrim();
+    console.log('Taking off!!');
+    d.takeOff();
+    d.flatTrim();
 
     // listen for the "keypress" event
     console.log('Listening for key controls ...');
