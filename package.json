@@ -12,7 +12,7 @@
   "dependencies": {
     "keypress": "^0.2.1",
     "noble": "^0.3.9",
-    "rolling-spider": "git://github.com/voodootikigod/node-rolling-spider.git",
+    "rolling-spider": "^1.0.1",
     "temporal": "^0.4.0"
   }
 }

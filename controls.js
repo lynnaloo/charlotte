@@ -39,7 +39,10 @@ function launch() {
       charlotte.on('battery', function () {
         console.log('Battery: ' + charlotte.status.battery + '%');
         charlotte.signalStrength(function (err, val) {
-          console.log('Signal: ' + charlotte.status.battery + 'dBm');
+          if(err) {
+            console.log(err);
+          }
+          console.log('Signal: ' + charlotte.peripheral.rssi + 'dBm');
         });
 
       });
